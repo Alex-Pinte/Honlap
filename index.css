@@ -1,0 +1,104 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #000080, #000000); /* Sötétkékből még sötétebbé az oldal legelejétől */
+}
+
+header, footer {
+    background: #000033; /* Sötétkék háttér az űrös megjelenéshez */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Fej- és lábléc árnyék */
+    transition: height 0.6s ease-in-out; /* Simább animáció */
+    height: 75px; /* Alapértelmezett magasság */
+    overflow: hidden; /* Segít elkerülni a tartalom túlnyúlását */
+    display: flex;
+    align-items: center; /* Szöveg középre igazítása függőlegesen */
+    justify-content: center; /* Szöveg középre igazítása vízszintesen */
+}
+
+    header:hover {
+        height: 150px; /* Fejléc simán hosszabbá válik */
+    }
+
+main {
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+    width: 75%;
+    margin: 0 auto;
+    gap: 10px; /* Kártyák közötti tér */
+}
+
+.card {
+    background: linear-gradient(to bottom right, #4B0082, #1C0D3F); /* Sötétlila belső átlós színátmenettel */
+    border: 1px solid #000; /* Fekete körvonal */
+    margin: 10px;
+    padding: 20px;
+    width: calc(33.333% - 40px); /* Három kártya soronként */
+    height: 300px; /* Hosszabb kártyák */
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px; /* Kerekített szélek */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Nagyobb árnyék 3D-s hatáshoz */
+    transition: transform 0.2s ease-in-out; /* Simább animációk */
+}
+
+    .card:hover {
+        transform: scale(1.1); /* Kicsit megnagyobbodik */
+        z-index: 1; /* A megnagyobbodott kártya fölé kerül */
+    }
+
+.container .card {
+    transition: transform 0.2s ease-in-out; /* Simább animációk */
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 40px); /* Két kártya soronként kisebb képernyőkön */
+        height: 200px; /* Hosszabb kártyák */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 40px); /* Egy kártya soronként nagyon kis képernyőkön */
+        height: 150px; /* Hosszabb kártyák */
+    }
+}
+
+
+.button {
+    display:inline-block ;
+    padding: 10px 40px;
+    font-size: 16px;
+    color: white;
+    background-color: rebeccapurple;
+    text-decoration: none;
+    width: 30px;
+}
+#cisco {
+    width: 200px;
+    height: 150px;
+    border: solid 2px;
+    border-radius: 5px;
+}
+ #nerve{
+     height:200px;
+     width:150px;
+     border:solid 2px;
+     border-radius:5px;
+ }
